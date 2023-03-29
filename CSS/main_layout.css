@@ -1,0 +1,167 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px, auto, 2fr;
+    position: relative;
+}
+
+header {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-items: space-between;
+    margin-bottom: .5em;
+    position: sticky;
+    top: 0;
+    align-items: center;
+}
+
+.top-links {
+    display: none;
+}
+
+ /* ======== Main Menu ======== */
+
+#off-canvas-menu {
+    position: absolute;
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.menu-close {
+    align-self: flex-end;
+}
+
+.closed {
+    left: -100%;
+    transition: 800ms;
+}
+
+.open {
+    left: 0;
+    transition: 800ms;
+}
+
+
+
+/* ============================= */
+
+main {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+footer {
+    grid-column: 1/-1;
+    grid-row: 3/4;
+}
+
+.mobile-footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-items: space-evenly;
+    gap: 1em;
+}
+
+
+/* ================= Tablet View =============== 
+================================================ */
+
+@media only screen and (min-width: 600px) and (max-width: 1079px) {
+
+}
+
+/* ================= Desktop View =============== 
+================================================ */
+
+@media only screen and (min-width: 1080px) {
+
+    body {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 2fr, 1fr, 1fr;
+
+    }
+
+    header {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-navigation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    main {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
+
+    footer {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
+
+    .desktop-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        justify-items: space-between;
+    }
+
+    .contact-details {
+        grid-column: 1/2;
+        grid-row: 1;
+        justify-self: start;
+    }
+
+    .copyright {
+        grid-column: 2/3;
+        grid-row: 1;
+        
+        align-self: end;
+        text-align: center;
+    }
+
+    .team {
+        grid-column: 3/4;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    #off-canvas-menu {
+        display: none;
+    }
+
+    .mobile-footer {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: none;
+    }
+
+    .top-links {
+        display: inline;
+    }
+
+    
+}
