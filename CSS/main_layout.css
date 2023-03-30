@@ -80,6 +80,51 @@ footer {
 
 @media only screen and (min-width: 600px) and (max-width: 1079px) {
 
+    /* ========= Footer ========= */
+
+    footer {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
+
+    .mobile-footer {
+        display: none;
+    }
+
+    .desktop-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        justify-items: space-between;
+    }
+
+    .contact-details {
+        grid-column: 1/2;
+        grid-row: 1;
+        justify-self: start;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        text-align: center;
+    }
+
+    .copyright {
+        grid-column: 2/3;
+        grid-row: 1;
+        
+        align-self: end;
+        text-align: center;
+    }
+
+    .team {
+        grid-column: 3/4;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+
+
 }
 
 /* ================= Desktop View =============== 

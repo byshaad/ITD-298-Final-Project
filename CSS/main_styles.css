@@ -144,6 +144,41 @@ address {
 
 @media only screen and (min-width: 600px) and (max-width: 1079px) {
 
+    .desktop-footer {
+        display: block;
+        padding: 1em;
+    }
+
+    .contact-details {
+        font-size: .6em;
+    }
+
+    .copyright > span {
+        font-size: .8em;
+    }
+
+    .team {
+        font-size: .6em;
+        width: 50%;
+    }
+
+    .team > span {
+        font-size: .7em;
+        padding-right: 1em;
+    }
+
+    .team > ul {
+        margin-top: 1em;
+    }
+
+    .team > ul li {
+        color: var(--violet);
+        font-size: .8em;
+        list-style: none;
+        margin-bottom: .8em;
+    }
+
+
 }
 
 /* ================= Desktop View =============== 
