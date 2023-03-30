@@ -23,7 +23,7 @@ header, footer {
     background-color: var(--lime-green);
 }
 
-
+/* ======== Top Navigation Styles ======== */ 
 .menu-close, .hamburger-icon {
     background-color: var(--lime-green);
     border: none;
@@ -85,13 +85,27 @@ header, footer {
 
 }
 
-/* ============================= */
+/* ======== Buttons ======== */
+
+
+
+button {
+    background-color: var(--violet);
+    border: none;
+    border-radius: 10px;
+    color: var(--lime-green);
+    font-weight: bold;
+    padding: .5em 2em .5em 2em;
+    animation-direction: reverse;
+    transition: 500ms linear;
+}
 
 button:hover {
-    background-color: var(--violet);
-    border: 2px solid white;
-    color: var(--lime-green);
-
+    background-color: var(--tan);
+    color: var(--violet);
+    text-decoration: underline;
+    animation-direction: normal;
+    transition: 500ms linear;
 }
 
 header > h1 {
@@ -102,6 +116,8 @@ header > h1 {
 .mobile-image {
     width: 95vw;
 }
+
+/* ======== Footer ======== */
 
 .mobile-footer {
     text-align: center;
@@ -143,6 +159,8 @@ address {
 ================================================ */
 
 @media only screen and (min-width: 600px) and (max-width: 1079px) {
+
+    /* ======== Footer ======== */
 
     .desktop-footer {
         display: block;
@@ -198,6 +216,8 @@ address {
         text-shadow: 0px 5px 5px black;
     }
 
+    /* ======== Top Navigation ======== */ 
+
     .top-navigation {
         width: 100%;
     }
@@ -224,6 +244,8 @@ address {
         color: var(--lime-green);
 
     }
+
+    /* ======== Footer ======== */ 
 
     .desktop-footer {
         display: block;
