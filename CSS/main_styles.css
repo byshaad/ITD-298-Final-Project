@@ -21,9 +21,16 @@ body {
 
 header, footer {
     background-color: var(--lime-green);
+    z-index: 100;
+}
+
+header > h1 {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 1.5em;
 }
 
 /* ======== Top Navigation Styles ======== */ 
+
 .menu-close, .hamburger-icon {
     background-color: var(--lime-green);
     border: none;
@@ -89,18 +96,21 @@ header, footer {
 
 
 
-button {
+main button {
     background-color: var(--violet);
     border: none;
     border-radius: 10px;
-    color: var(--lime-green);
+    color: var(--whitish-grey);
+    cursor: pointer;
     font-weight: bold;
-    padding: .5em 2em .5em 2em;
+    padding-bottom: .5em;
+    padding-top: .5em;
     animation-direction: reverse;
     transition: 500ms linear;
+    width: 150px
 }
 
-button:hover {
+main button:hover {
     background-color: var(--tan);
     color: var(--violet);
     text-decoration: underline;
@@ -108,13 +118,51 @@ button:hover {
     transition: 500ms linear;
 }
 
-header > h1 {
-    font-family: 'Poiret One', sans-serif;
-    font-size: 1.5em;
+.booking {
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* ======== Main Styles ======== */
+
 .mobile-image {
+    margin-bottom: .5em;
     width: 95vw;
+}
+
+#introduction {
+    margin: .5em;
+}
+
+.info-frame {
+    position: relative;
+    height: 270px;
+    margin-bottom: .5em;
+    max-width: 250px;
+}
+
+.info-background {
+    background-color: var(--tan);
+    height: 250px;
+    position: absolute;
+    transform: rotate(6deg);
+    width: 300px;
+    z-index: -1;
+}
+
+.intro-background {
+    background-color: var(--lime-green);
+    font-family: 'Cormorant', serif;
+    font-size: .8em;
+    height: 250px;
+    margin: 0 auto 0 auto;
+    padding: 1em;
+    text-align: center;
+    width: 300px;
+}
+
+.intro-background > h2 {
+    margin-bottom: .5em;
 }
 
 /* ======== Footer ======== */

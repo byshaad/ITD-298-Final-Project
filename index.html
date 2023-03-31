@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Search Engine Optimization (SEO) -->
+    <meta name="description" content="Salon web project for Professor Londo Andrews Spring 2023 ITD 298 Capstone">
+    <!-- CSS Stylesheets-->
+    <link href="./CSS/main_styles.css" rel="stylesheet">
+    <link href="./CSS/main_layout.css" rel="stylesheet">
+    <link href="./CSS/home_page_styles.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Farro:wght@300;400;500;700&family=Poiret+One&display=swap" rel="stylesheet">
+    <title>The Cutting Edge | ITD 298 Capstone</title>
+</head>
+<body>  
+    <!-- Off Canvas Main Menu-->
+    <div class="menu-overlay"></div>
+    <div id="off-canvas-menu" class="closed">
+        <button class="menu-close">X</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="Contact Us">Contact Us</a></li>
+        </ul>
+    </div>
+    <!-- End of Off Canvas Main Menu-->
+    
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="top-navigation">
+            <button class="hamburger-icon" aria-controls="off-canvas-menu" aria-expanded="false">&#9776;</button>
+            <ul class="top-links">
+                <li><button onclick="location.href='index.html'">Home</button></li>
+                <li><button onclick="location.href='about.html'">About</button></li>
+                <li><button onclick="location.href='testimonials.html'">Testimonials</button></li>
+                <li><button onclick="location.href='services.html'">Services</button></li>
+                <li><button onclick="location.href='booking.html'">Booking</button></li>
+                <li><button onclick="location.href='contactus.html'">Contact Us</button></li>
+            </ul>
+        </nav>
+        <!-- End of Navigation Bar-->
+        <h1>The Cutting Edge</h1>
+        <!-- Business Logo -->
+        <div class="logo-frame">
+            <img src="">
+        </div>
+        <!-- End of Business Logo -->
+    </header>
+    <main>
+        <article>
+            <!-- Image Carousel-->
+            <!-- Carousel Frame -->
+            <div id="carousel-frame">
+                <!-- Carousel Controls -->
+                <button class="carousel-button next-btn"><img src="./Images/right_arrow.png"></button>
+                <button class="carousel-button prev-btn"><img src="./Images/left_arrow.png"></button>
+                <!-- End Carousel Controls -->
+                <ul id="image-frame">
+                    <!-- Image Slides -->
+                    <li>
+                        <img class="image-slide slide-1" src="./Images/salon1.jpg" alt="Girl with brown curly hair.">
+                    </li>
+                    <li>
+                        <img class="image-slide slide-2"src="./Images/salon2.jpg" alt="Woman with straight black hair.">
+                    </li>
+                    <li>
+                        <img class="image-slide slide-3" src="./Images/salon3.jpg" alt="Two girls with kinky hair laying in grass.">
+                    </li>
+                    <li>
+                        <img class="image-slide slide-4" src="./Images/salon4.jpg" alt="Girl with kinky hair">
+                    </li>
+                    <li>
+                        <img class="image-slide slide-5" src="./Images/salon5.jpg" alt="Girl with short hair dyed blue.">
+                    </li>
+                    <li>
+                        <img class="image-slide slide-6" src="./Images/salon6.jpg" alt="Girl with pink dyed hair looking up.">
+                    </li>
+                    <!-- End Image Slides -->
+                </ul>
+            </div>
+            <!-- End Carousel Frame -->
+            <!-- Carousel Navigation -->
+            <div id="carousel-navigation">
+                <div class="slide-btn slide1_btn selected"></div>
+                    <div class="slide-btn slide2_btn"></div>
+                    <div class="slide-btn slide3_btn"></div>
+                    <div class="slide-btn slide4_btn"></div>
+                    <div class="slide-btn slide5_btn"></div>
+                    <div class="slide-btn slide6_btn"></div>
+            </div>
+            <!-- End Carousel Navigation -->
+
+            <!-- End Image Carousel-->
+            <picture id="main_image">
+                <source srcset="./Images/salon6.jpg" media="(min-width: 600px)">
+                <img class="mobile-image" src="./Images/salon2.jpg">
+            </picture>
+
+            <!-- Introduction-->
+            <section id="introduction">
+                <div class="info-frame">
+                    <div class="info-background"></div>
+                    <div class="intro-background">
+                            <h2> Welcome to The Cutting Edge</h2>
+                            <p>We have our fingers (and shears) on the pulse of all the trendiest styles!  We are a salon of professionally trained stylists in the Richmond area constantly honing our craft!  We are well versed in a variety of hair types, from the fluffiest of kinks to the straightest tresses!  From expert cuts, gorgeous color application, and the revitilization of damage hair; we do it all!  Walk-ins welcome!</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="booking">Book Appointment</button>
+                </div>
+            </section>
+            <!-- End Introduction-->
+        </article>
+    </main>
+    <footer>
+        <!-- Mobile View Footer -->
+        <div class="mobile-footer">
+            <!-- Salon Contact and Address -->
+            <div class="contact-details">
+                <h2>Contact Us</h2>
+                <span><a href="tel:5555555555">5555-555-5555</a> &#x2022; <a href="mailto:thecuttingedge@email.com">thecuttingedge@email.com</a></span>
+            </div>
+            <div class="contact-details">
+                <h2>Address</h2>
+                <address>1234 Someplace Dr.
+                <br>
+                Richmond, VA 23223
+                </address>
+            </div>
+            <!-- End of Salon Contact and Address -->
+            <!-- Copyright -->
+            <div class="copyright">
+                <span>&#169; Open License Resources and Materials Used</span>
+            </div>
+            <!-- End of Copyright -->
+        </div>
+        <!-- End of Mobile View Footer -->
+        <!-- Desktop and Tablet Footer -->
+        <div class="desktop-footer">
+            <!-- Salon Contact and Address -->
+            <div class="contact-details">
+                <div>
+                    <h2>Contact Us</h2>
+                    <a href="tel:5555555555">555-555-5555</a>
+                    <br>
+                    &#x2022;
+                    <br>
+                    <a href="mailto:thecuttingedge@email.com">thecuttingedge@email.com</a>
+                </div>
+                <div>
+                    <h2>Address</h2>
+                    <address>
+                        1234 Sompelace Dr.
+                        <br>
+                        Richmond, Virginia 23223
+                </address>
+                </div>
+            </div>
+            <!-- End of Salon Contact and Address -->
+            <!-- Copyright -->
+            <div class="copyright">
+                <span>&#169; Open License Resources and Materials Used</span>
+            </div>
+            <!-- End of Copyright -->
+            <!-- Team Members -->
+            <div class="team">
+                <span>Professor Andrews' Web Design Capstone 298 Course Final Project Spring 2023
+                <br>
+                <br>
+                Reynolds Community College</span>
+                <ul>
+                    <li>Jelissa Summers</li>
+                    <li>Ayawovi Badhoun</li>
+                    <li>Rashaad Bruce</li>
+                    <li>David Hodges</li>
+                </ul>
+            </div>
+            <!-- End of Team Members-->
+        </div>
+        <!-- End of Desktop and Tablet Footer -->
+    </footer>
+    <!-- Javascript Files -->
+    <script src="./Javascript/base_javascript.js"></script>
+    <script src="./Javascript/carousel.js"></script>
+    
+</body>
+</html>

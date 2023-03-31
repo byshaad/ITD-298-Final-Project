@@ -2,6 +2,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 250px, auto, 2fr;
+    gap: .5em;
     position: relative;
 }
 
@@ -18,6 +19,8 @@ header {
     top: 0;
     align-items: center;
 }
+
+/* ======== Top Navigation  ======== */ 
 
 .top-links {
     display: none;
@@ -40,12 +43,12 @@ header {
 
 .closed {
     left: -100%;
-    transition: 800ms;
+    transition: 800ms ease-in;
 }
 
 .open {
     left: 0;
-    transition: 800ms;
+    transition: 800ms ease-out;
 }
 
 
@@ -58,12 +61,28 @@ main {
 
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     justify-items: center;
 }
+
+#carousel-frame, #carousel-controls {
+    display: none; 
+}
+#introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ========= Footer ========= */
 
 footer {
     grid-column: 1/-1;
     grid-row: 3/4;
+
+    margin-top: .5em;
+    padding-bottom: .5em;
+    padding-top: .5em;
 }
 
 .mobile-footer {
@@ -132,6 +151,7 @@ footer {
 
 @media only screen and (min-width: 1080px) {
 
+
     body {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -148,6 +168,8 @@ footer {
         align-items: center;
     }
 
+    /* ======== Top Navigation ======== */ 
+
     .top-navigation {
         display: flex;
         flex-direction: row;
@@ -155,10 +177,26 @@ footer {
         justify-content: center;
     }
 
+    .hamburger-icon {
+        display: none;
+    }
+
+    .top-links {
+        display: inline;
+    }
+
+    /* ======== Main Menu ======== */
+
+    #off-canvas-menu {
+        display: none;
+    }
+
     main {
         grid-column: 1/-1;
         grid-row: 2/3;
     }
+
+    /* ======== Footer ======== */
 
     footer {
         grid-column: 1/-1;
@@ -192,21 +230,8 @@ footer {
         justify-self: end;
     }
 
-    #off-canvas-menu {
-        display: none;
-    }
-
     .mobile-footer {
         display: none;
     }
-
-    .hamburger-icon {
-        display: none;
-    }
-
-    .top-links {
-        display: inline;
-    }
-
     
 }
