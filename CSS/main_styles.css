@@ -121,6 +121,7 @@ main button:hover {
 .booking {
     margin-left: auto;
     margin-right: auto;
+    margin-top: .5em;
 }
 
 /* ======== Main Styles ======== */
@@ -128,41 +129,6 @@ main button:hover {
 .mobile-image {
     margin-bottom: .5em;
     width: 95vw;
-}
-
-#introduction {
-    margin: .5em;
-}
-
-.info-frame {
-    position: relative;
-    height: 270px;
-    margin-bottom: .5em;
-    max-width: 250px;
-}
-
-.info-background {
-    background-color: var(--tan);
-    height: 250px;
-    position: absolute;
-    transform: rotate(6deg);
-    width: 300px;
-    z-index: -1;
-}
-
-.intro-background {
-    background-color: var(--lime-green);
-    font-family: 'Cormorant', serif;
-    font-size: .8em;
-    height: 250px;
-    margin: 0 auto 0 auto;
-    padding: 1em;
-    text-align: center;
-    width: 300px;
-}
-
-.intro-background > h2 {
-    margin-bottom: .5em;
 }
 
 /* ======== Footer ======== */
