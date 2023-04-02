@@ -1,28 +1,30 @@
-
 article {
     grid-column: 1/-1;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1em;
 }
 
 #introduction {
+    align-self: center;
     margin: .5em;
+    width: 100%; 
 }
 
 .info-frame {
     position: relative;
     height: 270px;
     margin-bottom: .5em;
-    width: 250px;
+    width: 300px;
 }
 
 .info-background {
     background-color: var(--tan);
     box-shadow: -10px 0px 10px gray,
                 0px 10px 10px gray;
-    height: 250px;
+    height: 270px;
     position: absolute;
     transform: rotate(6deg);
     width: 300px;
@@ -34,7 +36,7 @@ article {
     border: 3px solid var(--violet);
     font-family: 'Cormorant', serif;
     font-size: .8em;
-    height: 250px;
+    height: 270px;
     margin: 0 auto 0 auto;
     padding: 1em;
     text-align: center;
@@ -45,6 +47,77 @@ article {
     margin-bottom: .5em;
     text-decoration: underline;
     text-decoration-color: var(--violet);
+}
+
+.icon-frame > img {
+    height: 10vh;
+}
+
+#health, #products, #luxury {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    gap: 0;
+    height: 200px;
+    margin: 1em;
+    overflow: hidden;
+}
+
+
+#health > div, #products > div, #luxury > div {
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+
+#health {
+    border: 5px solid var(--lime-green);
+}
+
+#health > div {
+    background-color: var(--violet);
+    padding: 1em;
+    width: 100%;
+}
+
+#products {
+    border: 5px solid var(--violet);
+}
+
+#products > div {
+    background-color: var(--tan);
+
+}
+
+#luxury {
+    border: 5px solid var(--tan);
+}
+
+#luxury > div {
+    background-color: var(--whitish-grey);
+}
+
+#health p, #products p, #luxury p {
+    font-family: 'Cormorant', serif;
+    padding: 0 1em 1em 1em;
+}
+
+#health p {
+    background-image: url(../Images/health_background.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#products p {
+    background-image: url(../Images/products_background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#luxury p {
+    background-image: url(../Images/luxury_background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 /* ================= Tablet View =============== 
@@ -141,12 +214,36 @@ article {
     }
     
     .info-background {
+        min-height: 280px;
         width: 100%;
     }
     
     .intro-background {
         font-size: calc(.9em + 5%);
+        min-height: 280px;
         width: 100%;
+    }
+
+    /* Basic Info */
+
+    #health, #products, #luxury {
+        display: flex;
+        flex-direction: row;
+        font-size: 1em;
+        gap: 0;
+        margin: 1em;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    #health {
+        margin-top: 2em;
+    }
+
+    .icon-frame > img {
+        height: auto;
+        max-width: 200px;
+        width: 20vw;
     }
 
 }
@@ -164,7 +261,7 @@ article {
     #carousel-frame {
         margin-bottom: .5em;
         position: relative;
-        outline: 1px solid red;
+        
     }
 
     picture {
@@ -174,7 +271,6 @@ article {
     #image-frame {
         width: 700px;
         overflow: hidden;
-
     }
 
     .image-slide {
@@ -251,5 +347,18 @@ article {
     .intro-background {
         font-size: calc(.9em + 5%);
         width: 100%;
+    }
+
+    #health, #products, #luxury {
+        display: flex;
+        flex-direction: row;
+        font-size: 1em;
+        gap: 0;
+    }
+
+    .icon-frame > img {
+        height: auto;
+        max-width: 200px;
+        width: 20vw;
     }
 }
