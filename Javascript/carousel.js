@@ -5,8 +5,8 @@
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
+const carouselNav = document.querySelector('#carousel-navigation');
 let slideBtns = document.querySelectorAll('.slide-btn');
-console.log(slideBtns);
 
 
 /* ========== Image Slides ========== */
@@ -16,6 +16,8 @@ let slideWidth = imageSlides[0].getBoundingClientRect().width;
 
 let imageOffset = 0;
 let imageWidth = slideWidth;
+let counter = 0;
+
 
 /* ========== Functions ========== */
 
@@ -44,17 +46,45 @@ let moveSlide = function () {
     }
 };
 
+let trackCarousel = () => {
+
+    for (let i = 0; i < slideBtns.length; i++) {
+        if (i == counter) {
+            slideBtns[i].classList.add('selected');
+            imageSlides[i].classList.add('selected');
+        } else  {
+            slideBtns[i].classList.remove('selected');
+            imageSlides[i].classList.remove('selected');
+        }
+    }
+
+};
+
+
+
 /* ========== Events ========== */ 
 
 nextBtn.addEventListener('click', () => {
     imageOffset = imageOffset - imageWidth;
-    for (let i = 0; i < slideBtns.length; i++) {
-        slideBtns[0].nextElementSibling.classList.add('selected');
-    }
+
+    counter++;
     moveSlide();
+    trackCarousel();
 });
 
 prevBtn.addEventListener('click', () => {
     imageOffset = imageOffset + imageWidth;
+    counter--;
     moveSlide();
-})
+    trackCarousel();
+
+});
+
+carouselNav.addEventListener('click', e => {
+    let slideBtn = e.target.closest('.slide-btn');
+    slideBtn.classList.add('selected');
+    siblingButtons.classList.remove('selected');
+    siblingButtons.classList.remove('selected');
+
+    console.log(siblingButtons);
+});

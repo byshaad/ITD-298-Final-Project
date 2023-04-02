@@ -69,7 +69,6 @@ article {
     }
 
     #image-frame {
-        position: relative;
         width: 500px;
         overflow: hidden;
     }
@@ -165,6 +164,7 @@ article {
     #carousel-frame {
         margin-bottom: .5em;
         position: relative;
+        outline: 1px solid red;
     }
 
     picture {
@@ -172,9 +172,9 @@ article {
     }
 
     #image-frame {
-        position: relative;
         width: 700px;
         overflow: hidden;
+
     }
 
     .image-slide {
@@ -194,7 +194,7 @@ article {
         background-color: transparent;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        /* transform: translateY(-50%); */
         width: auto;
         z-index: 1;
     }
